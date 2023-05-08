@@ -19,9 +19,10 @@ body{
     background: linear-gradient(to bottom, #000000 70%, #1b1a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-img{
+.main img{
     width: 38%;
     border-radius: 10%;
+    cursor: pointer;
 }
 
 .main{
