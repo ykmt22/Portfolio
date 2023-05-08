@@ -67,7 +67,7 @@ section.about h1{
     color: whitesmoke;
 }
 
-section.about span{
+section.about span.name{
     color: red;
 }
 
@@ -75,9 +75,43 @@ section.about p{
     color: wheat;
     line-height: 22px;
     font-size: 20px;
+    font-family: monospace;
 }
 
-section.about a{
+span.typing-container{
+    display: inline-block;
+}
+
+.typed{
+    overflow: hidden;
+    color: wheat;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(30, end) forwards, blinking 1s 3.5;
+    border-right: 10px solid black;
+}
+
+.typed_2{
+    overflow: hidden;
+    color: wheat;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(30, end) 5s forwards, blinking 1s infinite 4.5s;
+    border-right: 10px solid black;
+}
+
+@keyframes typing {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+@keyframes blinking {
+    0% {border-right-color: transparent}
+    50% {border-right-color: whitesmoke}
+    100% {border-right-color: transparent}
+}
+
+a.CV{
     background: red;
     padding: 10px 18px;
     text-decoration: none;
@@ -88,10 +122,39 @@ section.about a{
     border-radius: 6px;
 }
 
-section.about a:hover{
+a.CV:hover{
     background-color: whitesmoke;
     color: red;
     /* background-color: #ff7878; */
+}
+
+.git_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.button_container{
+    display: flex;
+    width: 350px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a.git{
+    background: #333;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 6px;
+}
+
+a.git:hover{
+    background-color: #5a5a5a;
+    /* color: #333; */
 }
 
 section.image{
