@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #0d0d0d;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #000000 70%, #1b1a1a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #000000 70%, #1b1a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+img{
+    width: 38%;
+    border-radius: 10%;
+}
+
+.main{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 93%;
+    margin: auto;
+    padding: 20px 0px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+nav ul li a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: red;
+}
+
+section.about {
+    margin-left: 7.3rem;
+    margin-top: 15rem;
+}
+
+section.about h1{
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: whitesmoke;
+}
+
+section.about span{
+    color: red;
+}
+
+section.about p{
+    color: wheat;
+    line-height: 22px;
+    font-size: 20px;
+}
+
+section.about a{
+    background: red;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 6px;
+}
+
+section.about a:hover{
+    background-color: whitesmoke;
+    color: red;
+    /* background-color: #ff7878; */
+}
+
+section.image{
+    width: 45%;
+    height: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+}
+
+section.image img{
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+
+img.bitmoji{
+    width: 80%;
+    margin-left: 20%;
+}
+
+.image:hover .shape{
+    bottom: 40px;
+}
+
+.image:hover .bitmoji{
+    left:45%
+}
