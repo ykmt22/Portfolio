@@ -210,6 +210,17 @@ img.bitmoji{
     width: 15%;
     border-radius: 50%;
     border: 5px solid red;
+
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+#profile_img:hover{
+    -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+    filter: grayscale(99%);
 }
 
 section#about{
