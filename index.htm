@@ -17,10 +17,10 @@
 
 <body>
     <div class="container main">
-        <nav>
+        <nav id="nav_bar">
             <a onClick="window.location.reload()"><img class="hover_effect" src="images/my_icon.png" alt="logo.png"></a>
             <ul class="container">
-                <li><a href="#">HOME</a></li>
+                <li><a href="#nav_bar">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#">PHOTOGRAPHY</a></li>
                 <li><a href="#">CONTACT ME</a></li>
@@ -58,27 +58,38 @@
             <img id="profile_img" class="hover_effect" src="images/car_profile.jpg" alt="Profile image">
             <div class="container flex_box">
                 <div class="about_text">
-                    <h2>About Me</h2>
-                    <h5>Software <span class="red">Developer</span> </h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.</p>
-                        <a class="red_button" href="#" style="margin: 15px 0;">Let's Talk !</a>
+                    <h2 class="about_heading">About Me</h2>
+                    <h5 class="about_subheading">Software <span class="red">Developer</span> </h5>
+                    <p class="about_data">I am a Full-Stack Software Developer with a variety of skillset. I have a strong Java Development background, which I used to get my expertise in <em>Backend Web-Development</em> and <em>Android Development</em>. I've worked on multiple projects which requires skillsets like <em>Java Development</em>, using Frameworks like <em>Spring Boot</em>, <em>Hibernate</em> and made a few <em>Android Applications</em> as well. I possess a vast knowledge of various programming and scripting languages as well. I am always eager to learn more. I am looking for an opportunity where I can contribute towards upcoming technology innovations that impacts the organization as well as broaden my scope of learning.</p>
+                        <a class="red_button" href="#" style="margin: 5px 0;">Let's Talk !</a>
                 </div>
 
                 <div class="info">
-                    <h2>Basic Info</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
-                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                        and more recently with desktop publishing software like Aldus PageMaker including versions of
-                        Lorem Ipsum.</p>
+                    <h2 class="about_heading">Basic Information</h2>
+                    
+                    <div class="container prime_container">
+                        <div id="age" class="flex_container">
+                            <div class="key about">AGE :</div>
+                            <div class="value">22</div>
+                        </div>
+                        <div id="email" class="flex_container">
+                            <div class="key">EMAIL :</div>
+                            <div class="value">shashankmaurya260101@gmail.com</div>
+                        </div>
+                        <div id="phone" class="flex_container">
+                            <div class="key">PHONE :</div>
+                            <div class="value">8292288525</div>
+                        </div>
+                        <div id="location" class="flex_container">
+                            <div class="key">LOCATION :</div>
+                            <div class="value">Jamshedpur, Jharkhand</div>
+                        </div>
+                        <div id="language" class="flex_container">
+                            <div class="key">LANGUAGES :</div>
+                            <div class="value">English, Hindi</div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
