@@ -54,7 +54,7 @@ nav {
 }
 
 nav div.image_container {
-    width: 50%;
+    width: 47%;
 }
 
 nav ul li {
@@ -392,12 +392,55 @@ section#skills ul li {
     color: #fff89d
 }
 
+/* Section#4 */
+
+section#projects .about_heading{
+    background: linear-gradient(to right, #A40111, #D77672);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 75px;
+    letter-spacing: 5px;
+}
+
+section#projects .projects_content{
+    margin: 2%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+section#projects .flex_container{
+    flex-direction: column;
+    padding: 20px;
+    width: 47vh;
+}
+
+section#projects img {
+    height: 10vh;
+    width: 10vh;
+    aspect-ratio: 1/1;
+    margin-bottom: 7vh;
+}
+
+section#projects .about_subheading{
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+section#projects .about_data{
+    margin-bottom: 0;
+}
+
 /* Section#5 */
 
-section#contact{
+section#contact {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 0;
+    height: 85vh;
 }
 
 section#contact .flex_container{
@@ -451,4 +494,11 @@ footer{
     font-size: 12px;
     text-align: center;
     padding: 30px;
+}
+
+img.up {
+    width: 10vh;
+    position: relative;
+    bottom: 20px;
+    right: -197vh;
 }
