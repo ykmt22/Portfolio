@@ -15,7 +15,7 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background: url("images/background.png");
+    background: url("images/background/background.png");
     /* background: #0d0d0d;  */
     /* background: -webkit-linear-gradient(to bottom, #000000 70%, #1b1a1a);   */
     /* background: linear-gradient(to bottom, #000000 70%, #1b1a1a);  */
@@ -27,7 +27,7 @@ section {
     padding-left: 85px;
     padding-right: 53.175px;
     margin-top: 2rem;
-    background: url("images/background.png");
+    background: url("images/background/background.png");
 }
 
 /* Section#1 */
@@ -335,7 +335,7 @@ section#about .prime_container {
 section#skills{
     /* -webkit-filter: hue-rotate(60deg);
     filter: hue-rotate(54deg); */
-    background: url("images/Background_yellow.png");
+    background: url("images/background/Background_yellow.png");
 }
 
 section#skills .about_heading {
@@ -390,4 +390,52 @@ section#skills ul li {
     text-align: center;
     margin: 8px 0;
     color: #fff89d
+}
+
+/* Section#5 */
+
+section#contact .flex_container{
+    flex-direction: column;
+}
+
+section#contact img#profile_img{
+    margin-bottom: 26px;
+}
+
+section#contact p {
+    color: whitesmoke;
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+section#contact .about_subheading{
+    font-size: 30px;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+section#contact .about_subheading:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+section#contact .social{
+    width: 30%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section#contact .social img{
+    height: 40;
+    width: 40;
+}
+
+footer{
+    font-size: 12px;
+    text-align: center;
+    padding: 30px;
 }
