@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -6,11 +6,11 @@
     scroll-behavior: smooth !important;
 }
 
-html{
+html {
     height: 100%;
 }
 
-body{
+body {
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -21,29 +21,30 @@ body{
     /* background: linear-gradient(to bottom, #000000 70%, #1b1a1a);  */
 }
 
-section{
+section {
     height: 90vh;
     padding: 40px 0;
     padding-left: 85px;
     padding-right: 53.175px;
     margin-top: 2rem;
+    background: url("images/background.png");
 }
 
 /* Section#1 */
 
-.main img{
+.main img {
     width: 38%;
     border-radius: 10%;
     cursor: pointer;
 }
 
-.main{
+.main {
     position: relative;
     height: 100%;
     width: 100%;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -52,19 +53,23 @@ nav{
     padding: 20px 0px;
 }
 
-nav ul li{
+nav div.image_container {
+    width: 50%;
+}
+
+nav ul li {
     display: inline-block;
     list-style: none;
     padding: 10px 20px;
 }
 
-nav ul li a{
+nav ul li a {
     color: white;
     font-weight: bold;
     text-decoration: none;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: red;
 }
 
@@ -73,30 +78,31 @@ section#home {
     margin-top: 15rem;
     height: 50vh;
     padding: 0;
+    background: none;
 }
 
-section#home h1{
+section#home h1 {
     font-size: 50px;
     margin-bottom: 30px;
     color: whitesmoke;
 }
 
-span.red{
+span.red {
     color: red;
 }
 
-section#home p{
+section#home p {
     color: wheat;
     line-height: 22px;
     font-size: 20px;
     font-family: monospace;
 }
 
-span.typing-container{
+span.typing-container {
     display: inline-block;
 }
 
-.typed{
+.typed {
     overflow: hidden;
     color: wheat;
     white-space: nowrap;
@@ -105,7 +111,7 @@ span.typing-container{
     border-right: 10px solid black;
 }
 
-.typed_2{
+.typed_2 {
     overflow: hidden;
     color: wheat;
     white-space: nowrap;
@@ -115,17 +121,30 @@ span.typing-container{
 }
 
 @keyframes typing {
-    from {width: 0;}
-    to {width: 100%;}
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blinking {
-    0% {border-right-color: transparent}
-    50% {border-right-color: whitesmoke}
-    100% {border-right-color: transparent}
+    0% {
+        border-right-color: transparent
+    }
+
+    50% {
+        border-right-color: whitesmoke
+    }
+
+    100% {
+        border-right-color: transparent
+    }
 }
 
-a.red_button{
+a.red_button {
     background: red;
     padding: 10px 18px;
     text-decoration: none;
@@ -138,26 +157,26 @@ a.red_button{
     transition: 0.4s;
 }
 
-a.red_button:hover{
+a.red_button:hover {
     background-color: whitesmoke;
     color: red;
     /* background-color: #ff7878; */
 }
 
-.git_container{
+.git_container {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.button_container{
+.button_container {
     display: flex;
     width: 350px;
     align-items: center;
     justify-content: space-between;
 }
 
-a.git{
+a.git {
     background: #333;
     padding: 10px 18px;
     text-decoration: none;
@@ -169,12 +188,12 @@ a.git{
     transition: 0.4s;
 }
 
-a.git:hover{
+a.git:hover {
     background-color: #5a5a5a;
     /* color: #333; */
 }
 
-.image{
+section#home .image_container {
     width: 45%;
     height: 80%;
     position: absolute;
@@ -182,7 +201,7 @@ a.git:hover{
     right: 100px;
 }
 
-.image img{
+section#home .image_container img {
     height: 100%;
     position: absolute;
     left: 50%;
@@ -191,23 +210,23 @@ a.git:hover{
     transition: bottom 1s, left 1s;
 }
 
-img.bitmoji{
+section#home img.bitmoji {
     width: 80%;
     margin-left: 20%;
 }
 
-.image:hover .shape{
+section#home .image_container:hover .shape {
     bottom: 40px;
 }
 
-.image:hover .bitmoji{
-    left:45%
+section#home .image_container:hover .bitmoji {
+    left: 45%
 }
 
 
 /* Section#2 */
 
-#profile_img{
+#profile_img {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -217,59 +236,57 @@ img.bitmoji{
     border: 5px solid red;
 }
 
-.hover_effect{
+.hover_effect {
     -webkit-transform: scale(1);
-	transform: scale(1);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+    transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
-.hover_effect:hover{
+.hover_effect:hover {
     -webkit-transform: scale(1.2);
-	transform: scale(1.2);
+    transform: scale(1.2);
     /* filter: grayscale(99%); */
 }
 
-section#about{
-    background: url("images/background.png");
-}
-
-.flex_box{
+.flex_box {
     transition: 1s;
+    border-radius: 3%;
 }
 
-.flex_box:hover{
+.flex_box:hover {
     transform: scale(1.05);
     background-color: #ffffff1e;
     padding: 10px;
+    border-radius: 3%;
 }
 
-section#about div.flex_box{
+section#about div.flex_box {
     margin-top: 30px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
-section#about div.about_text{
+section#about div.about_text {
     border-right: rgb(75, 75, 75) solid 1px;
     padding-right: 20px;
     width: 42rem;
 }
 
-section#about div.info{
+section#about div.info {
     padding-left: 20px;
     width: 42rem;
 }
 
-.about_heading{
+.about_heading {
     color: whitesmoke;
     font-size: 50px;
     text-transform: capitalize;
     margin-bottom: 8px;
 }
 
-.about_subheading{
+.about_subheading {
     color: whitesmoke;
     font-size: 20px;
     text-transform: capitalize;
@@ -277,7 +294,8 @@ section#about div.info{
     letter-spacing: 3px;
 }
 
-.about_data, section#about em{
+.about_data,
+section#about em {
     color: rgb(241, 188, 255);
     letter-spacing: 1px;
     line-height: 25px;
@@ -285,11 +303,11 @@ section#about div.info{
     margin-bottom: 20px;
 }
 
-section#about .prime_container{
+section#about .prime_container {
     margin-top: 55px;
 }
 
-.flex_container{
+.flex_container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -305,9 +323,71 @@ section#about .prime_container{
     font-style: italic;
 }
 
-.value{
+.value {
     margin-left: 15px;
     color: wheat;
     letter-spacing: 1px;
     font-size: 16px;
+}
+
+/* Section#3 */
+
+section#skills{
+    /* -webkit-filter: hue-rotate(60deg);
+    filter: hue-rotate(54deg); */
+    background: url("images/Background_yellow.png");
+}
+
+section#skills .about_heading {
+    background: linear-gradient(to right, #cf8b02, #b3af70, #b98109, #FBF5B7, #95620b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 75px;
+    letter-spacing: 5px;
+}
+
+section#skills .skills_content {
+    margin-top: 5%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+section#skills .flex_container {
+    flex-direction: column;
+    padding: 20px;
+    /* border-right: rgb(75, 75, 75) solid 1px; */
+}
+
+/* div.vertical {
+    border-left: 1px solid wheat;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+} */
+
+section#skills img {
+    height: 10vh;
+    width: 10vh;
+    margin-bottom: 7vh;
+}
+
+section#skills .about_subheading {
+    font-size: 27px;
+    color: #ffb43c;
+}
+
+section#skills .about_data {
+    line-height: 20px;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+section#skills ul li {
+    list-style: none;
+    text-align: center;
+    margin: 8px 0;
+    color: #fff89d
 }

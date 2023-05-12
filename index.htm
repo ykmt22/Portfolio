@@ -18,10 +18,12 @@
 <body>
     <div class="container main">
         <nav id="nav_bar">
-            <a onClick="window.location.reload()"><img class="hover_effect" src="images/my_icon.png" alt="logo.png"></a>
+            <div class="image_container"><a onClick="window.location.reload()"><img class="hover_effect"
+                        src="images/my_icon.png" alt="logo.png"></a></div>
             <ul class="container">
                 <li><a href="#nav_bar">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
+                <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#">PHOTOGRAPHY</a></li>
                 <li><a href="#">CONTACT ME</a></li>
             </ul>
@@ -36,8 +38,9 @@
             </span>
 
             <div class="button_container">
-                <a class="red_button" href="https://drive.google.com/file/d/1m_JrCcZNNuz2tuDCHymKbWTzQjav6UlA/view?usp=sharing"
-                    , target="_blank">DOWNLOAD CV</a>
+                <a class="red_button"
+                    href="https://drive.google.com/file/d/1m_JrCcZNNuz2tuDCHymKbWTzQjav6UlA/view?usp=sharing" ,
+                    target="_blank">DOWNLOAD CV</a>
                 <a class="git" href="https://github.com/ShashankMaurya" , target="_blank">
                     <div class="git_container">
                         <object data="images/github.svg" width="30" height="30"> </object> &nbsp; Go To GitHub
@@ -46,7 +49,7 @@
             </div>
 
             <a href="https://github.com/ShashankMaurya" , target="_blank">
-                <div class="image">
+                <div class="image_container">
                     <img src="images/shape_1.png" alt="aqua_shape" class="shape">
                     <img src="images/bitmoji.png" alt="bitmoji_hey" class="bitmoji">
                 </div>
@@ -60,13 +63,21 @@
                 <div class="about_text">
                     <h2 class="about_heading">About Me</h2>
                     <h5 class="about_subheading">Software <span class="red">Developer</span> </h5>
-                    <p class="about_data">I am a Full-Stack Software Developer with a variety of skillset. I have a strong Java Development background, which I used to get my expertise in <em>Backend Web-Development</em> and <em>Android Development</em>. I've worked on multiple projects which requires skillsets like <em>Java Development</em>, using Frameworks like <em>Spring Boot</em>, <em>Hibernate</em> and made a few <em>Android Applications</em> as well. I possess a vast knowledge of various programming and scripting languages as well. I am always eager to learn more. I am looking for an opportunity where I can contribute towards upcoming technology innovations that impacts the organization as well as broaden my scope of learning.</p>
-                        <a class="red_button" href="#" style="margin: 5px 0;">Let's Talk !</a>
+                    <p class="about_data">I am a Full-Stack Software Developer with a variety of skillset. I have a
+                        strong Java Development background, which I used to get my expertise in <em>Backend
+                            Web-Development</em> and <em>Android Development</em>. I've worked on multiple projects
+                        which requires skillsets like <em>Java Development</em>, using Frameworks like <em>Spring
+                            Boot</em>, <em>Hibernate</em> and made a few <em>Android Applications</em> as well. I
+                        possess a vast knowledge of various programming and scripting languages as well. I am always
+                        eager to learn more. I am looking for an opportunity where I can contribute towards upcoming
+                        technology innovations that impacts the organization as well as broaden my scope of learning.
+                    </p>
+                    <a class="red_button" href="#" style="margin: 5px 0;">Let's Talk !</a>
                 </div>
 
                 <div class="info">
                     <h2 class="about_heading">Basic Information</h2>
-                    
+
                     <div class="container prime_container">
                         <div id="age" class="flex_container">
                             <div class="key about">AGE :</div>
@@ -88,14 +99,82 @@
                             <div class="key">LANGUAGES :</div>
                             <div class="value">English, Hindi</div>
                         </div>
+                        <div id="intrests" class="flex_container">
+                            <div class="key">INTRESTS :</div>
+                            <div class="value">Driving, Swimming, Music</div>
+                        </div>
                     </div>
 
                 </div>
             </div>
 
-
         </section>
 
+        <section id="skills">
+            <h2 class="about_heading">Skills</h2>
+
+            <div class="skills_content">
+                <div class="flex_container flex_box" id="concepts">
+                    <img src="images/light_bulb.png" alt="light_bulb">
+                    <h2 class="about_subheading">Concepts</h2>
+                    <ul class="about_data">
+                        <li>Backend Web Development</li>
+                        <li>Android Deveploment</li>
+                        <li>Frontend Web Development</li>
+                        <li>Database Management System</li>
+                        <li>Operating Systems</li>
+                        <li>Data Structures</li>
+                        <li>Algorithms</li>
+                        <li>Computer Networks</li>
+                        <li>Internet of Things</li>
+                    </ul>
+                </div>
+                <!-- <div class="vertical"></div> -->
+                <div class="flex_container flex_box" id="tools">
+                    <img src="images/tools.png" alt="tools">
+                    <h2 class="about_subheading">Tools</h2>
+                    <ul class="about_data">
+                        <li>Android Studio</li>
+                        <li>GitHub</li>
+                        <li>NetBeans</li>
+                        <li>Eclipse IDE</li>
+                        <li>Figma</li>
+                        <li>Jupyter Notebook</li>
+                        <li>Visual Studio Code</li>
+                        <li>Spreadsheets</li>
+                    </ul>
+                </div>
+                <div class="flex_container flex_box" id="frameworks">
+                    <img src="images/framework.png" alt="Frameworks">
+                    <h2 class="about_subheading">Frameworks</h2>
+                    <ul class="about_data">
+                        <li>Spring Boot</li>
+                        <li>Hibernate</li>
+                        <li>Servlets</li>
+                        <li>Git</li>
+                        <li>APIs</li>
+                        <li>Java Swing</li>
+                        <li>Google Firebase</li>
+                        <li>JDBC Framework</li>
+                        <li>Bootstrap</li>
+                        <li>Arduino UNO</li>
+                    </ul>
+                </div>
+                <div class="flex_container flex_box" id="developments">
+                    <img src="images/programming.png" alt="web_development">
+                    <h2 class="about_subheading">Developments</h2>
+                    <ul class="about_data">
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C/C++</li>
+                        <li>Kotlin</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Linux Shell</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
     </div>
 
