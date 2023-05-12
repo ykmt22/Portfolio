@@ -394,12 +394,20 @@ section#skills ul li {
 
 /* Section#5 */
 
+section#contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 section#contact .flex_container{
     flex-direction: column;
 }
 
 section#contact img#profile_img{
     margin-bottom: 26px;
+    width: 7%;
+    border: 3px solid gray;
 }
 
 section#contact p {
@@ -423,15 +431,20 @@ section#contact .about_subheading:hover{
 
 section#contact .social{
     width: 30%;
-    margin-top: 10px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
 
 section#contact .social img{
-    height: 40;
-    width: 40;
+    height: 40px;
+    width: 40px;
+    aspect-ratio: 1/1;
+}
+
+section#contact .social .hover_effect:hover{
+    filter: opacity(0.6);
 }
 
 footer{
