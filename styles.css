@@ -3,11 +3,11 @@
     padding: 0;
     font-family: sans-serif;
     color: white;
-    scroll-behavior: smooth !important;
 }
 
 html {
     height: 100%;
+    scroll-behavior: smooth !important;
 }
 
 body {
@@ -19,6 +19,12 @@ body {
     /* background: #0d0d0d;  */
     /* background: -webkit-linear-gradient(to bottom, #000000 70%, #1b1a1a);   */
     /* background: linear-gradient(to bottom, #000000 70%, #1b1a1a);  */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 section {
@@ -332,7 +338,7 @@ section#about .prime_container {
 
 /* Section#3 */
 
-section#skills{
+section#skills {
     /* -webkit-filter: hue-rotate(60deg);
     filter: hue-rotate(54deg); */
     background: url("images/background/Background_yellow.png");
@@ -394,7 +400,7 @@ section#skills ul li {
 
 /* Section#4 */
 
-section#projects .about_heading{
+section#projects .about_heading {
     background: linear-gradient(to right, #A40111, #D77672);
     background-clip: text;
     -webkit-background-clip: text;
@@ -404,14 +410,14 @@ section#projects .about_heading{
     letter-spacing: 5px;
 }
 
-section#projects .projects_content{
+section#projects .projects_content {
     margin: 2%;
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
 }
 
-section#projects .flex_container{
+section#projects .flex_container {
     flex-direction: column;
     padding: 10px;
     width: 54vh;
@@ -423,11 +429,11 @@ section#projects .prime_container .flex_container {
     padding: 5px;
 }
 
-section#projects .key{
+section#projects .key {
     width: 130px;
 }
 
-section#projects .value{
+section#projects .value {
     margin-left: 10px;
 }
 
@@ -438,13 +444,13 @@ section#projects img {
     margin-bottom: 7vh;
 }
 
-section#projects .about_subheading{
+section#projects .about_subheading {
     font-size: 27px;
     margin-bottom: 10px;
     color: #ff5a5a;
 }
 
-section#projects .about_data{
+section#projects .about_data {
     margin-bottom: 0;
 }
 
@@ -476,11 +482,11 @@ section#contact {
     height: 85vh;
 }
 
-section#contact .flex_container{
+section#contact .flex_container {
     flex-direction: column;
 }
 
-section#contact img#profile_img{
+section#contact img#profile_img {
     margin-bottom: 26px;
     width: 7%;
     border: 3px solid gray;
@@ -493,19 +499,19 @@ section#contact p {
     letter-spacing: 3px;
 }
 
-section#contact .about_subheading{
+section#contact .about_subheading {
     font-size: 30px;
     text-transform: lowercase;
     letter-spacing: 5px;
     text-decoration: none;
 }
 
-section#contact .about_subheading:hover{
+section#contact .about_subheading:hover {
     color: red;
     text-decoration: underline;
 }
 
-section#contact .social{
+section#contact .social {
     width: 30%;
     margin-top: 20px;
     display: flex;
@@ -513,17 +519,17 @@ section#contact .social{
     justify-content: space-around;
 }
 
-section#contact .social img{
+section#contact .social img {
     height: 40px;
     width: 40px;
     aspect-ratio: 1/1;
 }
 
-section#contact .social .hover_effect:hover{
+section#contact .social .hover_effect:hover {
     filter: opacity(0.6);
 }
 
-footer{
+footer {
     font-size: 12px;
     text-align: center;
     padding: 30px;
