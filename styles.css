@@ -256,11 +256,12 @@ section#home .image_container:hover .bitmoji {
 }
 
 .flex_box {
-    transition: 1s;
+    /* transition: 1s; */
     border-radius: 3%;
 }
 
 .flex_box:hover {
+    transition: 1s;
     transform: scale(1.05);
     background-color: #ffffff1e;
     padding: 10px;
@@ -540,4 +541,48 @@ img.up {
     position: relative;
     bottom: 20px;
     right: -197vh;
+}
+
+/* Slide-in animation */
+
+.slide_anim.Y.upper {
+    position: relative;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+/* section#about .slide_anim.Y.upper{
+    transform: translate(-50px);
+} */
+
+.slide_anim.Y.lower {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.slide_anim.Y.slide {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.slide_anim.X.left {
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.slide_anim.X.right {
+    position: relative;
+    transform: translateX(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.slide_anim.X.slide {
+    transform: translateX(0);
+    opacity: 1;
 }
