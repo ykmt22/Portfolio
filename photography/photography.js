@@ -28,11 +28,48 @@ function carouselBuilder() {
 
     for (let i = 0; i < img_links.length; i++) {
         var newDiv = document.createElement('div');
-        newDiv.innerHTML = `<div class="mySlides fade">
-                                <div class="numbertext"> ${i + 1} / ${img_links.length} </div>
-                                <img src="${img_links[i]}" width="800" height="480"></img>
-                            </div>
-                            `;
+
+        var newImg = document.createElement('img');
+        newImg.className = 'cover_image';
+        newImg.width = "800";
+        newImg.height = "480";
+        newImg.src = img_links[i];
+
+        // manipulate image here
+
+        
+
+        // const image = new Image();
+        // image.src = newImg.src;
+        // console.log(image.src);
+
+        // var canvas = document.createElement('canvas');
+        // canvas.width = newImg.width;
+        // canvas.height = newImg.height;
+
+        // const ctx = canvas.getContext('2d');
+        // ctx.drawImage(newImg, 0, 0, newImg.width, newImg.height)
+
+        // canvas.toBlob(function(blob){
+            // console.log(blob);
+            // newImg.src = URL.createObjectURL(blob);
+            // console.log(newImg.src);
+        // }, newImg.mimeType, 50);
+
+        var chidDiv = document.createElement('div')
+        chidDiv.className = "mySlides fade";
+        chidDiv.id = 'slide_'+(i+1);
+        chidDiv.innerHTML = `<div class="numbertext"> ${i + 1} / ${img_links.length} </div>`;
+        chidDiv.appendChild(newImg);
+        // chidDiv.appendChild(canvas);
+
+        // newDiv.innerHTML = `<div class="mySlides fade" id="slide_${i + 1}">
+        //                         <div class="numbertext"> ${i + 1} / ${img_links.length} </div>
+        //                         <img class = "cover_image" src="${img_links[i]}" width="800" height="480"></img>
+        //                     </div>
+        //                     `;
+
+        newDiv.appendChild(chidDiv);
         newDiv.classList.add('parentSlide')
 
         document.querySelector('div.slideshow').appendChild(newDiv);
@@ -51,7 +88,7 @@ function showSlidesAuto() {
         slideIndex = 1
     }
     slides[slideIndex - 1].style.display = "block";
-    // setTimeout(showSlidesAuto, 6000);
+    setTimeout(showSlidesAuto, 6000);
 }
 
 function showSlides(n) {
