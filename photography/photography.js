@@ -51,7 +51,7 @@ function showSlidesAuto() {
         slideIndex = 1
     }
     slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlidesAuto, 6000);
+    // setTimeout(showSlidesAuto, 6000);
 }
 
 function showSlides(n) {
