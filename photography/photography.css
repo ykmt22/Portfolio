@@ -34,6 +34,10 @@ body::-webkit-scrollbar {
     margin: auto;
 }
 
+.cover_image {
+    object-fit: scale-down;
+}
+
 .parentSlide {
     display: flex;
     align-items: center;
@@ -42,9 +46,23 @@ body::-webkit-scrollbar {
 
 .mySlides {
     display: none;
+    height: 502px;
+    border: 1px solid white;
 }
 
-.next, .prev {
+.bg-img{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    height: 500px;
+    z-index: -1;
+    position: absolute;
+    filter: blur(10px);
+}
+
+.next,
+.prev {
     cursor: pointer;
     position: absolute;
     right: 73.3%;

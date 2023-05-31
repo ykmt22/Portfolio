@@ -41,11 +41,12 @@ function carouselBuilder() {
         // }, 2000);
         newImg.referrerPolicy = 'no-referrer';
 
-        let chidDiv = document.createElement('div')
-        chidDiv.className = "mySlides fade";
-        chidDiv.id = 'slide_' + (i + 1);
-        chidDiv.innerHTML = `<div class="numbertext"> ${i + 1} / ${img_links.length} </div>`;
-        chidDiv.appendChild(newImg);
+        let childDiv = document.createElement('div')
+        childDiv.className = "mySlides fade";
+        childDiv.id = 'slide_' + (i + 1);
+        childDiv.innerHTML = `<div class="numbertext"> ${i + 1} / ${img_links.length} </div>
+                                    <div class = "bg-img"></div>`;
+        childDiv.appendChild(newImg);
 
         // chidDiv.appendChild(canvas);
 
@@ -55,11 +56,16 @@ function carouselBuilder() {
         //                     </div>
         //                     `;
 
-        newDiv.appendChild(chidDiv);
+        newDiv.appendChild(childDiv);
         newDiv.classList.add('parentSlide')
 
         // document.querySelector('div.slideshow').appendChild(newDiv);
         $('div.slideshow').append(newDiv);
+
+        $(`.mySlides#${childDiv.id} .bg-img`).css('background-image', `url(${newImg.src})`);
+        // console.log($(`#${childDiv.id} img`).attr('src'));
+        // console.log($('.mySlides').css('background-image'));
+
     }
 
 }
