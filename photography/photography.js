@@ -1,7 +1,10 @@
 var img_links = [];
 var slideIndex = 0;
+var darkBoxVisiblity = false;
 
 $.getJSON('https://script.google.com/macros/s/AKfycbwbe8X7rSHrhMdTEz3Gj0QeB4DmkJV9rOeA_V6J-0fWM4fo-nMVaqJ_hQRioQh18PXwtg/exec', getImages);
+
+
 
 function getImages(img_json) {
     console.log(img_json);
@@ -18,6 +21,11 @@ function getImages(img_json) {
 
     carouselBuilder();
     showSlidesAuto();
+
+    $('.gallery img').click(function (event) {
+        darkBoxBuilder(event.currentTarget.src);
+    });
+
 }
 
 // Carousel Controller
@@ -151,9 +159,37 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
-function galleryBuilder(link){
+function galleryBuilder(link) {
     let newImg = document.createElement('img');
     newImg.src = link;
 
     $('.gallery').append(newImg);
+}
+
+function darkBoxBuilder(url) {
+    if (!darkBoxVisiblity) {
+        let x = (window.innerWidth - 1000) / 2;
+        let y = window.scrollY + 50;
+
+        let newDiv = document.createElement('div');
+        newDiv.className = 'darkBox';
+        newDiv.innerHTML = `<img class = 'darkBox_img' src = '${url}'/>`;
+        newDiv.style.left = x.toString() + 'px';
+        newDiv.style.top = y.toString() + 'px';
+        newDiv.height = 'auto';
+        $('body').append(newDiv);
+        darkBoxVisiblity = true;
+
+        $('.darkBox').click(function () {
+            removeDarkBox();
+        });
+    }
+    else {
+        removeDarkBox();
+    }
+}
+
+function removeDarkBox() {
+    $('.darkBox').remove();
+    darkBoxVisiblity = false;
 }

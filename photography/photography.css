@@ -164,3 +164,22 @@ body::-webkit-scrollbar {
     transform: scale(1.02);
     /* z-index: 1; */
 }
+
+/* DarkBox-CSS */
+
+.darkBox{
+    width: 1000px;
+    /* height: 720px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.darkBox_img{
+    padding: 5%;
+    max-width: 950px;
+    max-height: 684px;
+}
