@@ -1,37 +1,35 @@
-// import fs from 'fs';
-// var proxyURL = 'https://cors-anywhere.herokuapp.com/';
 var img_links = [];
-let slideIndex = 0;
+var slideIndex = 0;
 
 $.getJSON('https://script.google.com/macros/s/AKfycbwbe8X7rSHrhMdTEz3Gj0QeB4DmkJV9rOeA_V6J-0fWM4fo-nMVaqJ_hQRioQh18PXwtg/exec', getImages);
 
 function getImages(img_json) {
     console.log(img_json);
-    var obj = JSON.parse(JSON.stringify(img_json));
+    let obj = JSON.parse(JSON.stringify(img_json));
 
-    var baseURL = "https://drive.google.com/uc?export=view&id=";
+    let baseURL = "https://drive.google.com/uc?export=view&id=";
     // var baseURL = "https://drive.google.com/file/d/$img_id/preview"
     // <iframe src="https://drive.google.com/file/d/1-VTL4aZr205Tf5bh6eIuKsM0m8KgBSLj/preview" width="640" height="480" allow="autoplay"></iframe>
 
-    for (var i = 0; i < obj.data.length; i++) {
+    for (let i = 0; i < obj.data.length; i++) {
         img_links.push(baseURL + obj.data[i].img_id);
         // img_links.push(baseURL.replace('$img_id', obj.data[i].img_id));
     }
 
-    carouselBuilder(img_links);
+    carouselBuilder();
     showSlidesAuto();
 }
 
 // Carousel Controller
 
-function carouselBuilder(img_links) {
+function carouselBuilder() {
 
     console.log(img_links.length);
 
     for (let i = 0; i < img_links.length; i++) {
-        var newDiv = document.createElement('div');
+        let newDiv = document.createElement('div');
 
-        var newImg = document.createElement('img');
+        let newImg = document.createElement('img');
         newImg.className = 'cover_image';
         newImg.width = "800";
         newImg.height = "500";
@@ -43,7 +41,7 @@ function carouselBuilder(img_links) {
         // }, 2000);
         newImg.referrerPolicy = 'no-referrer';
 
-        var chidDiv = document.createElement('div')
+        let chidDiv = document.createElement('div')
         chidDiv.className = "mySlides fade";
         chidDiv.id = 'slide_' + (i + 1);
         chidDiv.innerHTML = `<div class="numbertext"> ${i + 1} / ${img_links.length} </div>`;
