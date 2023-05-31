@@ -66,6 +66,8 @@ function carouselBuilder() {
         // console.log($(`#${childDiv.id} img`).attr('src'));
         // console.log($('.mySlides').css('background-image'));
 
+        galleryBuilder(newImg.src);
+
     }
 
 }
@@ -147,4 +149,11 @@ function plusSlides(n) {
 
 function currentSlide(n) {
     showSlides(slideIndex = n);
+}
+
+function galleryBuilder(link){
+    let newImg = document.createElement('img');
+    newImg.src = link;
+
+    $('.gallery').append(newImg);
 }
