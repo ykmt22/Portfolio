@@ -20,13 +20,33 @@ body {
     /* background: #0d0d0d;  */
     /* background: -webkit-linear-gradient(to bottom, #000000 70%, #1b1a1a);   */
     /* background: linear-gradient(to bottom, #000000 70%, #1b1a1a);  */
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    /* -ms-overflow-style: none;
+    scrollbar-width: none; */
+    /* scrollbar-color: #6969dd #e0e0e0;
+    scrollbar-width: thin; */
 }
 
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     display: none;
-}
+} */
+
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #050505ec;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5%;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
 
 header {
     color: whitesmoke;
