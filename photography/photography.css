@@ -32,7 +32,7 @@ header {
     color: whitesmoke;
     font-size: 30px;
     text-transform: capitalize;
-    margin: 10px;
+    margin: 15px;
     background: linear-gradient(to right, #cf8b02, #b3af70, #b98109, #FBF5B7, #95620b);
     background-clip: text;
     -webkit-background-clip: text;
@@ -88,7 +88,7 @@ header h1 {
     cursor: pointer;
     position: absolute;
     right: 73.3%;
-    top: 47%;
+    top: 50%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -238,7 +238,17 @@ a.img_gDrive:hover {
 a.img_gDrive#folder {
     margin-bottom: 0;
     position: absolute;
-    top: 555px;
+    top: 565px;
+}
+
+.darkBox h5 {
+    position: absolute;
+    top: 4px;
+    right: 5px;
+    margin: 10px;
+    font-size: 3vh;
+    padding: 1px;
+    cursor: pointer;
 }
 
 footer {

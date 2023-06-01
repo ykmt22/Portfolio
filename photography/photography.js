@@ -19,10 +19,27 @@ function getImages(img_json) {
     carouselBuilder();
     showSlidesAuto();
 
-    $('.gallery img').click(function (event) {
+    $('.gallery img , .mySlides img').click(function (event) {
         darkBoxBuilder(event.currentTarget.src);
     });
 
+    $('body').keydown(function (event) {
+        if(event.key=='Escape'){
+            removeDarkBox();
+        }
+    });
+
+    $('body').keydown(function (event) {
+        if(event.key=='ArrowLeft'){
+            plusSlides(-1);
+        }
+    });
+
+    $('body').keydown(function (event) {
+        if(event.key=='ArrowRight'){
+            plusSlides(1);
+        }
+    });
 }
 
 // Carousel Controller
@@ -45,7 +62,7 @@ function carouselBuilder() {
         childDiv.className = "mySlides fade";
         childDiv.id = 'slide_' + (i + 1);
         childDiv.innerHTML = `<div class="numbertext"> ${i + 1} / ${img_links.length} </div>
-                                    <div class = "bg-img"></div>`;
+                                <div class = "bg-img"></div>`;
         childDiv.appendChild(newImg);
 
         newDiv.appendChild(childDiv);
@@ -115,7 +132,6 @@ function galleryBuilder(link) {
 
 function darkBoxBuilder(url) {
     let img_id = url.substring(url.lastIndexOf('id=')+3);
-    // console.log(img_id);
     let openURL = `https://drive.google.com/file/d/${img_id}/view?usp=drive_link`;
     if (!darkBoxVisiblity) {
         let x = (window.innerWidth - 1000) / 2;
@@ -123,7 +139,8 @@ function darkBoxBuilder(url) {
 
         let newDiv = document.createElement('div');
         newDiv.className = 'darkBox';
-        newDiv.innerHTML = `<img class = 'darkBox_img' src = '${url}'/>
+        newDiv.innerHTML = `<h5 class = "cross"  onclick="removeDarkBox()">X</h5>
+                            <img class = 'darkBox_img' src = '${url}'/>
                             <a class="img_gDrive" href="${openURL}" , target="_blank">
                                 <div class="btn_container">
                                     <object data="../images/social/gdrive.png" width="30" height="30"> </object> &nbsp; Open in GDrive
