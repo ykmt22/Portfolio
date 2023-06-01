@@ -229,6 +229,12 @@ a.img_gDrive:hover {
     background-color: #ff4141;
 }
 
+a.img_gDrive#folder {
+    margin-bottom: 0;
+    position: absolute;
+    top: 555px;
+}
+
 footer {
     font-size: 12px;
     text-align: center;
