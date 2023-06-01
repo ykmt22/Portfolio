@@ -114,16 +114,25 @@ function galleryBuilder(link) {
 }
 
 function darkBoxBuilder(url) {
+    let img_id = url.substring(url.lastIndexOf('id=')+3);
+    // console.log(img_id);
+    let openURL = `https://drive.google.com/file/d/${img_id}/view?usp=drive_link`;
     if (!darkBoxVisiblity) {
         let x = (window.innerWidth - 1000) / 2;
         let y = window.scrollY + 50;
 
         let newDiv = document.createElement('div');
         newDiv.className = 'darkBox';
-        newDiv.innerHTML = `<img class = 'darkBox_img' src = '${url}'/>`;
+        newDiv.innerHTML = `<img class = 'darkBox_img' src = '${url}'/>
+                            <a class="img_gDrive" href="${openURL}" , target="_blank">
+                                <div class="btn_container">
+                                    <object data="../images/social/gdrive.png" width="30" height="30"> </object> &nbsp; Open in GDrive
+                                </div>
+                            </a>`;
         newDiv.style.left = x.toString() + 'px';
         newDiv.style.top = y.toString() + 'px';
         newDiv.height = 'auto';
+
         $('body').append(newDiv);
         darkBoxVisiblity = true;
 

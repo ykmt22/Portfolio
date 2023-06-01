@@ -202,8 +202,31 @@ header h1 {
 
 .darkBox_img {
     padding: 5%;
+    padding-bottom: 1%;
     max-width: 950px;
     max-height: 684px;
+}
+
+.btn_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+a.img_gDrive {
+    background: #ff0000;
+    padding: 10px 18px;
+    text-decoration: none;
+    font-weight: bold;
+    color: whitesmoke;
+    display: inline-block;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    transition: 0.4s;
+}
+
+a.img_gDrive:hover {
+    background-color: #ff4141;
 }
 
 footer {
