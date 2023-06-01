@@ -190,6 +190,7 @@ header h1 {
 /* DarkBox-CSS */
 
 .darkBox {
+    display: flex;
     width: 1000px;
     /* height: 720px; */
     position: absolute;
@@ -198,6 +199,11 @@ header h1 {
     text-align: center;
     overflow: hidden;
     background-color: #333;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 
 .darkBox_img {
