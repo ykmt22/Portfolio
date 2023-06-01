@@ -13,7 +13,7 @@ html {
 
 body {
     height: 100%;
-    margin: 0;
+    margin: 0 25px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background: url("../images/background/background.png");
@@ -26,6 +26,28 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+header {
+    color: whitesmoke;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: 10px;
+    background: linear-gradient(to right, #cf8b02, #b3af70, #b98109, #FBF5B7, #95620b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+header h1 {
+    border: 1px solid #cf8b02;
+    width: fit-content;
+    padding: 7px 100px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
 }
 
 .slideshow {
@@ -50,7 +72,7 @@ body::-webkit-scrollbar {
     border: 1px solid white;
 }
 
-.bg-img{
+.bg-img {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -66,7 +88,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
     position: absolute;
     right: 73.3%;
-    top: 31%;
+    top: 47%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
@@ -116,40 +138,40 @@ body::-webkit-scrollbar {
 
 /* Gallery-CSS */
 
-.gallery{
+.gallery {
     line-height: 0;
     column-count: 5;
     column-gap: 5px;
-    margin: 25px;
+    margin: 25px 0;
 }
 
 @media (max-width: 1200px) {
-    .gallery{
+    .gallery {
         column-count: 4;
-    } 
+    }
 }
 
 @media (max-width: 1000px) {
-    .gallery{
+    .gallery {
         column-count: 3;
-    } 
+    }
 }
 
 
 @media (max-width: 800px) {
-    .gallery{
+    .gallery {
         column-count: 2;
-    } 
+    }
 }
 
 
 @media (max-width: 400px) {
-    .gallery{
+    .gallery {
         column-count: 1;
-    } 
+    }
 }
 
-.gallery img{
+.gallery img {
     width: 100% !important;
     height: auto !important;
     margin-bottom: 5px;
@@ -159,7 +181,7 @@ body::-webkit-scrollbar {
     /* transition: .3s ease-in-out;  */
 }
 
-.gallery img:hover{
+.gallery img:hover {
     filter: none;
     transform: scale(1.02);
     /* z-index: 1; */
@@ -167,7 +189,7 @@ body::-webkit-scrollbar {
 
 /* DarkBox-CSS */
 
-.darkBox{
+.darkBox {
     width: 1000px;
     /* height: 720px; */
     position: absolute;
@@ -178,8 +200,15 @@ body::-webkit-scrollbar {
     background-color: #333;
 }
 
-.darkBox_img{
+.darkBox_img {
     padding: 5%;
     max-width: 950px;
     max-height: 684px;
+}
+
+footer {
+    font-size: 12px;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid #4d4d4d;
 }
